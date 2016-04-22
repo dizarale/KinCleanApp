@@ -1,0 +1,233 @@
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragment_controller.menu_show_activity"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/bgsetting">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/thumbnail"
+        android:src="@drawable/logo"
+        android:scaleType="fitXY"
+        android:minHeight="200dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thumbnail"
+        android:layout_above="@+id/submit">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="menu_name"
+                    android:id="@+id/menu_name"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="menu_name_thai"
+                    android:id="@+id/menu_name_thai"
+                    android:textStyle="bold"
+                    android:layout_below="@+id/menu_name"
+                    android:layout_alignLeft="@+id/menu_name" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="ราคา"
+                    android:id="@+id/price"
+                    android:layout_below="@+id/menu_name_thai"
+                    android:layout_alignLeft="@+id/menu_name_thai"
+                    android:layout_alignStart="@+id/menu_name_thai"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="จำนวน"
+                    android:id="@+id/textView5"
+                    android:layout_above="@+id/number"
+                    android:textStyle="bold"
+                    android:layout_marginRight="15dp"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="0"
+                    android:id="@+id/menu_price"
+                    android:textColor="#fc0404"
+                    android:textStyle="bold|italic"
+                    android:layout_below="@+id/price"
+                    android:layout_alignLeft="@+id/price"
+                    android:layout_alignStart="@+id/price" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:id="@+id/number"
+                    android:layout_alignTop="@+id/menu_price"
+                    android:layout_alignRight="@+id/textView5"
+                    android:layout_alignEnd="@+id/textView5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Detail"
+                    android:id="@+id/textView7"
+                    android:layout_below="@+id/number"
+                    android:layout_alignLeft="@+id/menu_price"
+                    android:layout_alignStart="@+id/menu_price"
+                    android:textStyle="bold"
+                    android:layout_alignRight="@+id/textView5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="............................................................."
+                    android:id="@+id/menu_des"
+                    android:layout_below="@+id/textView7"
+                    android:layout_alignLeft="@+id/textView7"
+                    android:layout_alignStart="@+id/textView7"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignRight="@+id/number"
+                    android:layout_alignEnd="@+id/number" />
+
+
+
+            </RelativeLayout>
+
+
+    </ScrollView>
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="menu_name"
+        android:id="@+id/menu_name"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/thumbnail"
+        android:layout_alignStart="@+id/thumbnail"
+        android:textStyle="bold"
+        android:layout_below="@+id/thumbnail"
+        android:layout_marginLeft="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="menu_name_thai"
+        android:id="@+id/menu_name_thai"
+        android:layout_below="@+id/menu_name"
+        android:layout_alignLeft="@+id/menu_name"
+        android:layout_alignStart="@+id/menu_name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="ราคา"
+        android:id="@+id/price"
+        android:layout_below="@+id/menu_name_thai"
+        android:layout_alignLeft="@+id/menu_name_thai"
+        android:layout_alignStart="@+id/menu_name_thai"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="จำนวน"
+        android:id="@+id/textView5"
+        android:layout_above="@+id/number"
+        android:layout_alignRight="@+id/thumbnail"
+        android:layout_alignEnd="@+id/thumbnail"
+        android:textStyle="bold"
+        android:layout_marginRight="15dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="0"
+        android:id="@+id/menu_price"
+        android:textColor="#fc0404"
+        android:textStyle="bold|italic"
+        android:layout_below="@+id/price"
+        android:layout_alignLeft="@+id/price"
+        android:layout_alignStart="@+id/price" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/number"
+        android:layout_alignTop="@+id/menu_price"
+        android:layout_alignRight="@+id/textView5"
+        android:layout_alignEnd="@+id/textView5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Detail"
+        android:id="@+id/textView7"
+        android:layout_below="@+id/number"
+        android:layout_alignLeft="@+id/menu_price"
+        android:layout_alignStart="@+id/menu_price"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/textView5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="............................................................."
+        android:id="@+id/menu_des"
+        android:layout_below="@+id/textView7"
+        android:layout_alignLeft="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_marginTop="10dp"
+        android:layout_above="@+id/submit"
+        android:layout_alignRight="@+id/number"
+        android:layout_alignEnd="@+id/number" />-->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="เพื่มลงในตระกร้า"
+        android:id="@+id/submit"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/btnsetting" />
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

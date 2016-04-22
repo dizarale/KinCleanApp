@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="250dp">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/user_name"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:hint="ชื่อผู้ใช้"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/tel"
+        android:layout_above="@+id/user_name"
+        android:layout_alignRight="@+id/user_name"
+        android:gravity="center_horizontal"
+        android:layout_alignLeft="@+id/user_name"
+        android:layout_centerHorizontal="true"
+        android:hint="หมายเลขโทรศัพท์"
+        android:maxLength="10" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SET"
+        android:id="@+id/set_btn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Small Text"
+        android:id="@+id/imei"
+        android:layout_below="@+id/user_name"
+        android:layout_alignRight="@+id/user_name"
+        android:layout_alignEnd="@+id/user_name" />
+</RelativeLayout>

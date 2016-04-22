@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.kinclean.dizarale.kinclean.fragment_controller.location_activity"
+    android:background="@color/bgsetting">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+        android:layout_above="@+id/submit_btn">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="สถานที่รับ"
+            android:id="@+id/location_btn"
+            android:layout_below="@+id/time_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="เวลารับ"
+            android:id="@+id/time_btn"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/location_edit"
+            android:layout_below="@+id/location_btn"
+            android:layout_centerHorizontal="true"
+            android:hint="*รายละเอียดจุดรับเพื่มเติม\nเช่น ห้องโรบอท ห้องภาค  เป้นต้น"
+            android:minLines="3"
+            android:layout_margin="10dp"
+            android:background="#8edbdbdb"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/location_edit"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="*ข้อตกลง"
+                android:id="@+id/textView2"
+                android:layout_below="@+id/order_edit"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp" />
+        </ScrollView>
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ยืนยัน"
+        android:id="@+id/submit_btn"
+        android:layout_alignParentStart="false"
+        android:background="@color/btnsetting"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+</RelativeLayout>
