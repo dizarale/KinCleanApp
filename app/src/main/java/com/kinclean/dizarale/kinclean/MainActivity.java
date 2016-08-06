@@ -43,6 +43,7 @@ import com.kinclean.dizarale.kinclean.fragment_controller.menu_activity;
 import com.kinclean.dizarale.kinclean.fragment_controller.menu_show_activity;
 import com.kinclean.dizarale.kinclean.service.APP_config;
 import com.kinclean.dizarale.kinclean.service.HTTPReq;
+import com.kinclean.dizarale.kinclean.service.RegistrationIntentService;
 
 import org.parceler.Parcels;
 
@@ -66,7 +67,7 @@ public class MainActivity extends AppCompatActivity
     TextView user_name_display;
     TextView user_tel_display;
     FloatingActionButton fab;
-
+    Intent intentGCM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +75,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        intentGCM = new Intent(this, RegistrationIntentService.class);
+        startService(intentGCM);
 
         int sdkVersion = android.os.Build.VERSION.SDK_INT;
 
